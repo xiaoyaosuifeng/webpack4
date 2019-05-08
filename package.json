@@ -1,0 +1,44 @@
+{
+  "name": "webpack4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config=config/webpack.dev.js ",
+    "build_pro": "webpack --config=config/webpack.pro.js ",
+    "start": "webpack-dev-server --config=config/webpack.config.js ",
+    "production": "webpack-dev-server --config=config/webpack.pro.js ",
+    "development": "webpack-dev-server --config=config/webpack.dev.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^2.0.2",
+    "cross-env": "^5.2.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "glob": "^7.1.4",
+    "html-withimg-loader": "^0.1.16",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "style-loader": "^0.23.1"
+  }
+}
