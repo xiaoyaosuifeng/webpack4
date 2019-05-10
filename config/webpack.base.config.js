@@ -110,6 +110,14 @@ module.exports = {
         contentBase: path.resolve(__dirname, '../dist'),
         port: 9001,
         open: true,
+        proxy: {//反向代理
+            '/api/*': {//匹配到/api/字符串就代理
+                target: 'http://localhost:8080',//代理路径
+                changeOrigin: true,     // target是域名的话，需要这个参数，
+                secure: false,          // 设置支持https协议的代理
+                pathRewrite: {'^/api' : ''},//api替换为字符串
+            }
+        },
     },
     // optimization: {
     //     //用于分离公共js模块
