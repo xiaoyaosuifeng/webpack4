@@ -115,7 +115,7 @@ module.exports = {
                 target: 'http://localhost:8080',//代理路径
                 changeOrigin: true,     // target是域名的话，需要这个参数，
                 secure: false,          // 设置支持https协议的代理
-             // pathRewrite: {'^/api' : ''},//api替换为字符串不生效
+             // pathRewrite: {'^/api' : ''},  //api替换为字符串不生效,
             }
         },
     },
