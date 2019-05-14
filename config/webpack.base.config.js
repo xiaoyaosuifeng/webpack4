@@ -108,7 +108,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, '../dist'),
-        port: 9001,
+        port: 9000,
         open: true,
         proxy: {//反向代理
             '/api/*': {//匹配到/api/字符串就代理
