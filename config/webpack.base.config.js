@@ -7,11 +7,15 @@ const glob = require('glob');//消除多余的css代码
 const webpack = require('webpack');
 const fs = require('fs');
 let [entry, myHtmlPlugins] = [{}, []];
-let files = fs.readdirSync(path.resolve(__dirname, '../src/html'));
-entry['common'] = path.resolve(__dirname, '../src/js/common.js');
-files.map(i => {
+let htmlFiles = fs.readdirSync(path.resolve(__dirname, '../src/html'));
+let jsFiles=fs.readdirSync(path.resolve(__dirname,'../src/js'));
+jsFiles.map(i=>{
+    if(/\.js$/.test(i)){
+        entry[i.replace(/\.js$/, '')] = path.resolve(__dirname, '../src/js/' + i);
+    }
+})
+htmlFiles.map(i => {
     if (/\.html$/.test(i)) {
-        entry[i.replace(/\.html$/, '')] = path.resolve(__dirname, '../src/js/' + i.replace(/\.html$/, ''));
         myHtmlPlugins.push(new htmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/html/' + i),
             filename: i,
