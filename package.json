@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config=config/webpack.dev.js ",
-    "build_pro": "webpack --config=config/webpack.pro.js ",
+    "build": "webpack --config=config/webpack.pro.js ",
+    "build_test": "webpack --config=config/webpack.dev.js ",
     "start": "webpack-dev-server --config=config/webpack.dev.js "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
     "clean-webpack-plugin": "^2.0.2",
     "cross-env": "^5.2.0",
