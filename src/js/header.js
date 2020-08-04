@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "@/less/header.less";
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
 $(function () {
   let header = `<header><nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>

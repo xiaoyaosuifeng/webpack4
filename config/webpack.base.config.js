@@ -118,10 +118,10 @@ module.exports = {
       //反向代理
       "/api/*": {
         //匹配到/api/字符串就代理
-        target: "http://localhost:8080", //代理路径
+        target: "http://47.101.191.160:9002/", //代理路径
         changeOrigin: true, // target是域名的话，需要这个参数，
         secure: false, // 设置支持https协议的代理
-        // pathRewrite: {'^/api' : ''},  //api替换为字符串,pathRewrite属性不生效
+        pathRewrite: { "^/api": "" }, //api替换为字符串
       },
     },
   },
